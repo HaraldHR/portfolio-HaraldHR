@@ -1,0 +1,121 @@
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  max-width: 500px;
+}
+
+.header-content img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: #222;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  background-color: #eaeaea;
+}
+
+header img {
+  margin-top: 1.5rem;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+main {
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Projects Grid Layout */
+/* Projects Grid Layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-size: cover; /* Ensure the background image covers the entire card */
+  background-position: center; /* Center the image */
+  height: 300px; /* Fixed height for the card */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card a {
+  text-decoration: none;
+  color: white; /* White text for readability */
+}
+
+.project-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+}
