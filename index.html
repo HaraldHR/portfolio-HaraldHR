@@ -33,70 +33,30 @@
     <main>
       <section id="projects">
         <h2>Projects</h2>
-        <div class="project-grid">
-          <!-- Project 1 -->
-          <div
-            class="project-card"
-            style="background-image: url('project_images/project1.jpg')"
-          >
-            <a href="project1.html">
-              <h3>Project 1: ML Classifier</h3>
-              <p>
-                Learn how to build a machine learning classifier with Python.
-              </p>
-            </a>
-          </div>
-          <!-- Project 2 -->
-          <div
-            class="project-card"
-            style="background-image: url('project_images/project2.jpg')"
-          >
-            <a href="project2.html">
-              <h3>Project 2: CI Pipeline</h3>
-              <p>A continuous integration pipeline for automated testing.</p>
-            </a>
-          </div>
-          <!-- Project 3 -->
-          <div
-            class="project-card"
-            style="background-image: url('project_images/project3.jpg')"
-          >
-            <a href="project3.html">
-              <h3>Project 3: Game Prototype</h3>
-              <p>Build a simple game prototype with Unity.</p>
-            </a>
-          </div>
-          <!-- Project 4 -->
-          <div
-            class="project-card"
-            style="background-image: url('project_images/project4.jpg')"
-          >
-            <a href="project4.html">
-              <h3>Project 4: Chatbot</h3>
-              <p>Create a chatbot using natural language processing.</p>
-            </a>
-          </div>
-          <!-- Project 5 -->
-          <div
-            class="project-card"
-            style="background-image: url('project_images/project5.jpg')"
-          >
-            <a href="project5.html">
-              <h3>Project 5: Web Scraping</h3>
-              <p>Scrape data from websites with Python and BeautifulSoup.</p>
-            </a>
-          </div>
-          <!-- Project 6 -->
-          <div
-            class="project-card"
-            style="background-image: url('project_images/project6.jpg')"
-          >
-            <a href="project6.html">
-              <h3>Project 6: IoT Application</h3>
-              <p>Build an IoT system to monitor sensors in real-time.</p>
-            </a>
-          </div>
+        <div class="project-filters">
+          <label>
+            <input type="checkbox" value="ml" class="filter-checkbox" />
+            Machine Learning
+          </label>
+          <label>
+            <input type="checkbox" value="web" class="filter-checkbox" />
+            Web Development
+          </label>
+          <label>
+            <input type="checkbox" value="game" class="filter-checkbox" />
+            Game Development
+          </label>
+          <label>
+            <input type="checkbox" value="oss" class="filter-checkbox" />
+            Open Source
+          </label>
+          <label>
+            <input type="checkbox" value="embedded" class="filter-checkbox" />
+            Embedded Systems
+          </label>
         </div>
+        <div class="project-grid" id="projectGrid"></div>
+        <script src="project_filter.js"></script>
       </section>
     </main>
 
