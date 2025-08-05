@@ -8,8 +8,9 @@ const projects = [
     type: "ml",
   },
   {
-    title: "Vanilla RNN built from scratch",
-    description: "A vanilla RNN built from scratch using only Numpy",
+    title: "Vanilla CNN built from scratch",
+    description:
+      "A vanilla CNN for image classification, built from scratch using only NumPy",
     image: "project_images/project2.jpg",
     link: "project2.html",
     type: "ml",
