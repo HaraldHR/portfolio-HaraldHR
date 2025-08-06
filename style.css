@@ -10,6 +10,7 @@
 
 .intro-text {
   max-width: 500px;
+  text-align: center;
 }
 
 .header-content img {
@@ -195,6 +196,26 @@ h2 {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+}
+
+.contact-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 20px;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-links a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.contact-links img {
+  width: 24px;
+  height: 24px;
 }
 
 @media (max-width: 600px) {

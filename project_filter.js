@@ -8,9 +8,9 @@ const projects = [
     type: "ml",
   },
   {
-    title: "Vanilla CNN built from scratch",
+    title: "Image Classification CNN",
     description:
-      "A vanilla CNN for image classification, built from scratch using only NumPy",
+      "A convolutional neural network for image classification, built from scratch using NumPy",
     image: "project_images/project2.jpg",
     link: "project2.html",
     type: "ml",
