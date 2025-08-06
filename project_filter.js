@@ -3,7 +3,7 @@ const projects = [
     title: "Shapespeare LSTM",
     description:
       "An Pytorch LSTM trained on Shakespeare plays, improved with the use of BPE and Word2vec",
-    image: "project_images/project1.jpg",
+    image: "project_images/shakespeare.jpg",
     link: "projects/project_LSTM.html",
     type: "ml",
   },
@@ -11,14 +11,14 @@ const projects = [
     title: "Image Classification CNN",
     description:
       "A convolutional neural network for image classification, built from scratch using NumPy",
-    image: "project_images/project2.jpg",
+    image: "project_images/cnnimage.jpg",
     link: "project2.html",
     type: "ml",
   },
   {
     title: "3D Adventure RPG in Unity",
     description: "A (not finished) Unity powered game",
-    image: "project_images/project3.jpg",
+    image: "project_images/voxelrpg.jpg",
     link: "project3.html",
     type: "game",
   },
@@ -26,14 +26,14 @@ const projects = [
     title: "Bar2Tender",
     description:
       "React website for cocktail recipes using the TheCocktailDB API.",
-    image: "project_images/project5.jpg",
+    image: "project_images/bar2tender.jpg",
     link: "project5.html",
     type: "web",
   },
   {
     title: "Open Source Python Contribution",
     description: "Contribution to the Beeware Toga repository",
-    image: "project_images/project6.jpg",
+    image: "project_images/toga.jpg",
     link: "project6.html",
     type: "oss",
   },
@@ -41,7 +41,7 @@ const projects = [
     title: "Arduino-Powered Game Controller",
     description:
       "Built two controllers using Arduino and a game using Processing.",
-    image: "project_images/project4.jpg",
+    image: "project_images/arduino.jpg",
     link: "project4.html",
     type: "embedded",
   },
