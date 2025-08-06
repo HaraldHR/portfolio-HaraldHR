@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Project: Continuous Integration Service - Harald Hamrin Reinhed
+    </title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navbar (same as index.html) -->
+    <nav>
+      <div>
+        <a href="../index.html">Harald Hamrin Reinhed</a>
+      </div>
+      <ul>
+        <li><a href="../index.html#projects">Projects</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="project-page-title">
+        Project: Continuous Integration Service
+      </h1>
+
+      <section id="github-link" class="project-page-section">
+        <h2>GitHub Repository</h2>
+        <div class="github-link">
+          <a
+            href="https://github.com/jannikhoesch/Continuous-Integration-Group10"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://github.com/jannikhoesch/Continuous-Integration-Group10
+          </a>
+        </div>
+      </section>
+
+      <section id="tech-stack" class="project-page-section">
+        <h2>Tech Stack</h2>
+        <p>Python, GitHub REST API, Flask, Unittest</p>
+      </section>
+
+      <section id="description" class="project-page-section">
+        <h2>Description</h2>
+        <p>
+          This project implements a basic Continuous Integration (CI) service in
+          Python. It automatically responds to GitHub events using webhooks, and
+          checks if a committed version of a repository compiles and passes its
+          unit tests.
+          <br /><br />
+          The service runs as a small HTTP server and uses the GitHub REST API
+          to report build status back to GitHub. If the build passes all steps
+          (compilation and unittests), it sets the status to "success",
+          otherwise "failure".
+          <br /><br />
+          The tests are executed using Python’s built-in
+          <code>unittest</code> discovery tool. The server also stores build
+          history, supports multiple endpoints, and uses environment variables
+          to manage tokens securely.
+        </p>
+      </section>
+
+      <section id="my-contributions" class="project-page-section">
+        <h2>My Contributions</h2>
+
+        <ul>
+          <li>Found out and taught the group how to use a GitHub token.</li>
+          <li>Implemented GitHub token management.</li>
+          <li>Setting up and documenting <code>requirements.txt</code></li>
+          <li>
+            Implemented the logic that sends the HTTP POST request to the GitHub
+            REST API to report the build status (pass or fail) back to the
+            corresponding commit.
+          </li>
+          <li>
+            Collaborated with the rest of the team during integration and
+            debugging.
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

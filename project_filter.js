@@ -25,7 +25,7 @@ const projects = [
   {
     title: "Bar2Tender",
     description:
-      "React website for cocktail recipes using the TheCocktailDB API.",
+      "A React website for cocktail recipes using the TheCocktailDB API.",
     image: "project_images/bar2tender.jpg",
     link: "projects/Bar2Tender.html",
     type: "web",
@@ -40,10 +40,24 @@ const projects = [
   {
     title: "Arduino-Powered Game Controller",
     description:
-      "Built two controllers using Arduino and a game using Processing.",
+      "Two Arduino-powered controllers used for a game built with Processing.",
     image: "project_images/arduino.jpg",
-    link: "project4.html",
+    link: "projects/ArduinoController.html",
     type: "embedded",
+  },
+  {
+    title: "Hungry Snakes",
+    description: "My first object-oriented programming project.",
+    image: "project_images/snake.jpg",
+    link: "projects/HungrySnakes.html",
+    type: "game",
+  },
+  {
+    title: "Continous Integration Service",
+    description: "A basic CI service to use with Github.",
+    image: "project_images/CI.jpg",
+    link: "projects/CIService.html",
+    type: "other",
   },
 ];
 

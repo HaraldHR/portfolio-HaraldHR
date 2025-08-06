@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project: Arduino Game Controllers - Harald Hamrin Reinhed</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navbar (same as index.html) -->
+    <nav>
+      <div>
+        <a href="../index.html">Harald Hamrin Reinhed</a>
+      </div>
+      <ul>
+        <li><a href="../index.html#projects">Projects</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="project-page-title">Project: Arduino Game Controllers</h1>
+
+      <section id="github-link" class="project-page-section">
+        <h2>GitHub Repository</h2>
+        <div class="github-link">
+          <a
+            href="https://github.com/max-andreasen/SENSOR-Project"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://github.com/max-andreasen/SENSOR-Project
+          </a>
+        </div>
+      </section>
+
+      <section id="tech-stack" class="project-page-section">
+        <h2>Tech Stack</h2>
+        <p>Arduino C/C++, Processing, Serial Communication</p>
+      </section>
+
+      <section id="description" class="project-page-section">
+        <h2>Description</h2>
+        <p>
+          This group project combines Arduino microcontrollers and a game
+          developed in Processing to create a two-player local multiplayer
+          experience. Each player uses a custom-built Arduino game controller
+          made from physical sensors and actuators.
+          <br /><br />
+          The game, inspired by agar.io, was implemented in Processing and
+          includes a basic client-server architecture. One computer runs the
+          server and a player client, while another computer runs only a player
+          client. The server manages game state and synchronizes gameplay over
+          serial and network communication.
+          <br /><br />
+          Each Arduino communicates with its respective client using serial USB,
+          translating hardware inputs (like button presses and joystick
+          movement) into game commands (movement).
+          <br /><br />
+          The game also includes a feature where, by picking up a power-up, you
+          may change what sensor your opponent has to use to play the game.
+        </p>
+      </section>
+
+      <section id="contributions" class="project-page-section">
+        <h2>My Contributions</h2>
+        <ul>
+          <li>
+            Designed and built one of the custom Arduino controllers using
+            potentiometers and a accelerometer.
+          </li>
+          <li>
+            Wrote an Arduino program to read input and communicate via serial.
+          </li>
+          <li>
+            Integrated serial communication into the Processing game and mapped
+            the input values to movement.
+          </li>
+          <li>Helped set up the client-server communication.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
