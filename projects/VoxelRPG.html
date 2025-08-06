@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project: 3D Voxel RPG - Harald Hamrin Reinhed</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navbar (same as index.html) -->
+    <nav>
+      <div>
+        <a href="../index.html">Harald Hamrin Reinhed</a>
+      </div>
+      <ul>
+        <li><a href="../index.html#projects">Projects</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="project-page-title">Project: 3D Voxel RPG (Unity)</h1>
+
+      <section id="github-link" class="project-page-section">
+        <h2>GitHub Repository</h2>
+        <div class="github-link">
+          <a
+            href="https://github.com/HaraldHR/Voxel-RPG"
+            <!--
+            Replace
+            with
+            actual
+            link
+            --
+          >
+            https://github.com/HaraldHR/Voxel-RPG
+          </a>
+        </div>
+      </section>
+
+      <section id="tech-stack" class="project-page-section">
+        <h2>Tech Stack</h2>
+        <p>Unity, C#, MagicaVoxel</p>
+      </section>
+
+      <section id="description" class="project-page-section">
+        <h2>Description</h2>
+        <p>
+          This is an in-progress 3D voxel-style RPG developed using Unity and
+          C#. The game features a fully functional player movement system (with
+          support for jumping, walking, and rotating), as well as an inventory
+          system with UI for picking up, storing, and using items.
+          <br /><br />
+          Players can also interact with objects in the world using a
+          custom-built interaction system that allows for triggering behaviors
+          like picking up items or opening containers.
+          <br /><br />
+          All graphics and models were created by me in MagicaVoxel to match the
+          stylized voxel aesthetic. While development is ongoing, the core
+          systems are in place and ready to be expanded with gameplay features
+          such as combat, quests, and dialogue.
+        </p>
+      </section>
+      <section id="gallery" class="project-page-section">
+        <h2>Gallery</h2>
+
+        <!-- Thumbnail or preview image -->
+        <div class="gallery-thumb-wrapper">
+          <img
+            src="../modal_images/VoxelRPG/image1.jpg"
+            alt="Click to view gallery"
+            class="gallery-thumb"
+            onclick="openModal(0)"
+          />
+        </div>
+
+        <!-- Modal structure -->
+        <div id="imageModal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img class="modal-content" id="modalImage" />
+          <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+          <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+      </section>
+    </main>
+
+    <!--Modal script -->
+    <script>
+      const images = [
+        "../modal_images/VoxelRPG/image1.jpg",
+        "../modal_images/VoxelRPG/image2.jpg",
+        "../modal_images/VoxelRPG/image3.jpg",
+        "../modal_images/VoxelRPG/image4.jpg",
+      ];
+
+      let currentIndex = 0;
+
+      function openModal(index) {
+        currentIndex = index;
+        document.getElementById("imageModal").style.display = "block";
+        showImage(currentIndex);
+      }
+
+      function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+      }
+
+      function changeSlide(n) {
+        currentIndex = (currentIndex + n + images.length) % images.length;
+        showImage(currentIndex);
+      }
+
+      function showImage(index) {
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = images[index];
+      }
+    </script>
+  </body>
+</html>

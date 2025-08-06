@@ -218,6 +218,99 @@ h2 {
   height: 24px;
 }
 
+.gallery-thumb {
+  width: 100%;
+  max-width: 600px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-thumb:hover {
+  transform: scale(1.02);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
+
+@media (max-width: 600px) {
+  .prev,
+  .next {
+    font-size: 30px;
+    padding: 12px;
+  }
+}
+
+.gallery-thumb-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.gallery-thumb {
+  width: 600px;
+  max-width: 90%;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-thumb:hover {
+  transform: scale(1.03);
+}
+
 @media (max-width: 600px) {
   .project-page-section {
     padding: 1.5rem 1rem;

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project: BeeWare Contribution - Harald Hamrin Reinhed</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navbar (same as index.html) -->
+    <nav>
+      <div>
+        <a href="../index.html">Harald Hamrin Reinhed</a>
+      </div>
+      <ul>
+        <li><a href="../index.html#projects">Projects</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="project-page-title">Project: BeeWare Contribution (Toga)</h1>
+
+      <section id="github-link" class="project-page-section">
+        <h2>Pull Request</h2>
+        <div class="github-link">
+          <a
+            href="https://github.com/beeware/toga/pull/3217"
+            target="_blank"
+            >https://github.com/beeware/toga/pull/3217</a
+          >
+        </div>
+      </section>
+
+      <section id="tech-stack" class="project-page-section">
+        <h2>Tech Stack</h2>
+        <p>Python, BeeWare Toga Framework</p>
+      </section>
+
+      <section id="description" class="project-page-section">
+        <h2>Description</h2>
+        <p>
+          This open source contribution was made to the
+          <a href="https://github.com/beeware/toga" target="_blank">BeeWare Toga</a>
+          repository. The update enhances the `Canvas.write_text` and
+          `Canvas.measure_text` methods by adding support for configurable line spacing.
+          <br /><br />
+          Previously, while the methods accepted multiple lines, the spacing between
+          lines could not be adjusted. With the new `line_height_factor` parameter,
+          developers can now control line spacing programmatically — for example,
+          by linking it to a slider in the UI, which is what we did for debugging purposes. 
+          This feature allows for improved text layout flexibility in canvas-based apps.
+          <br /><br />
+          The change was implemented across all backends that implement a canvas:
+          <ul>
+            <li>Android</li>
+            <li>Cocoa (macOS)</li>
+            <li>GTK (Linux)</li>
+            <li>iOS</li>
+            <li>WinForms (Windows)</li>
+          </ul>
+        </p>
+      </section>
+
+      <section id="contributions" class="project-page-section">
+        <h2>My Contributions</h2>
+        <ul>
+          <li>Read the documentation and helped figure out how to contribute to the repository.</li>
+          <li>Updated the OS specific implementations to be able to handle configurable line-spacing.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

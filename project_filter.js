@@ -2,24 +2,24 @@ const projects = [
   {
     title: "Shapespeare LSTM",
     description:
-      "An Pytorch LSTM trained on Shakespeare plays, improved with the use of BPE and Word2vec",
+      "A Pytorch LSTM trained on Shakespeare plays, improved with the use of BPE and Word2vec.",
     image: "project_images/shakespeare.jpg",
-    link: "projects/project_LSTM.html",
+    link: "projects/LSTM.html",
     type: "ml",
   },
   {
     title: "Image Classification CNN",
     description:
-      "A convolutional neural network for image classification, built from scratch using NumPy",
+      "A convolutional neural network for image classification, built from scratch using NumPy.",
     image: "project_images/cnnimage.jpg",
-    link: "project2.html",
+    link: "projects/CNN.html",
     type: "ml",
   },
   {
     title: "3D Adventure RPG in Unity",
-    description: "A (not finished) Unity powered game",
+    description: "A (not finished) Unity powered game.",
     image: "project_images/voxelrpg.jpg",
-    link: "project3.html",
+    link: "projects/VoxelRPG.html",
     type: "game",
   },
   {
@@ -27,14 +27,14 @@ const projects = [
     description:
       "React website for cocktail recipes using the TheCocktailDB API.",
     image: "project_images/bar2tender.jpg",
-    link: "project5.html",
+    link: "projects/Bar2Tender.html",
     type: "web",
   },
   {
-    title: "Open Source Python Contribution",
-    description: "Contribution to the Beeware Toga repository",
+    title: "BeeWare Contribution (Toga)",
+    description: "Contribution to the Beeware Toga repository.",
     image: "project_images/toga.jpg",
-    link: "project6.html",
+    link: "projects/Toga.html",
     type: "oss",
   },
   {

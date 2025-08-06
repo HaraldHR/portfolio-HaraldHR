@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project: 3D Voxel RPG - Harald Hamrin Reinhed</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navbar (same as index.html) -->
+    <nav>
+      <div>
+        <a href="../index.html">Harald Hamrin Reinhed</a>
+      </div>
+      <ul>
+        <li><a href="../index.html#projects">Projects</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="project-page-title">Project: Bar2Tender</h1>
+
+      <section id="github-link" class="project-page-section">
+        <h2>GitHub Repository (not original repo)</h2>
+        <div class="github-link">
+          <a
+            href="https://github.com/HaraldHR/Bar2Tender"
+            <!--
+            Replace
+            with
+            actual
+            link
+            --
+          >
+            https://github.com/HaraldHR/Bar2Tender
+          </a>
+        </div>
+      </section>
+
+      <section id="tech-stack" class="project-page-section">
+        <h2>Tech Stack</h2>
+        <p>React, JavaScript, CSS, Firebase</p>
+      </section>
+
+      <section id="description" class="project-page-section">
+        <h2>Description</h2>
+        <p>
+          <strong>OBS:</strong> The API has had a small change which broke 
+          the search feature, the ingredient tracker and the quiz still works though.
+        </br> </br>
+          This group project is a React-based cocktail website using the
+          CocktailDB API. It features a front page where users can search
+          cocktails and filter results based on ingredients they currently have.
+          Users can keep track of their ingredients with a “My Ingredients”
+          search and tracker. There is a cocktail details page showing
+          ingredients and other information, and a favorites list to save
+          cocktails. Additionally, there is a guessing game where a random
+          cocktail is shown and the user must guess its ingredients before the
+          timer runs out. The timer is implemented using a React hook. The
+          website also uses Google sign-in authentication.
+        </p>
+      </section>
+      <section id="contributions" class="project-page-section">
+        <h2>My Contributions</h2>
+        <ul>
+          <li>
+            Set up firebase relational database and implemented it into the
+            project.
+          </li>
+          <li>
+            Implemented the ingredient tracker together with one other person.
+          </li>
+          <li>Implemented the functionality of the cocktail details page.</li>
+          <li>Implemented "enough ingredients" filter.</li>
+          <li>Implemented the timer for the quiz using a React hook.</li>
+          <li>Read documentation and figured out how to use the API.</li>
+        </ul>
+      </section>
+      <section id="gallery" class="project-page-section">
+        <h2>Gallery</h2>
+
+        <!-- Thumbnail or preview image -->
+        <div class="gallery-thumb-wrapper">
+          <img
+            src="../modal_images/Bar2Tender/image1.jpg"
+            alt="Click to view gallery"
+            class="gallery-thumb"
+            onclick="openModal(0)"
+          />
+        </div>
+
+        <!-- Modal structure -->
+        <div id="imageModal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img class="modal-content" id="modalImage" />
+          <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+          <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+      </section>
+    </main>
+
+    <!--Modal script -->
+    <script>
+      const images = [
+        "../modal_images/Bar2Tender/image1.jpg",
+        "../modal_images/Bar2Tender/image2.jpg",
+        "../modal_images/Bar2Tender/image3.jpg",
+        "../modal_images/Bar2Tender/image4.jpg",
+        "../modal_images/Bar2Tender/image5.jpg",
+      ];
+
+      let currentIndex = 0;
+
+      function openModal(index) {
+        currentIndex = index;
+        document.getElementById("imageModal").style.display = "block";
+        showImage(currentIndex);
+      }
+
+      function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+      }
+
+      function changeSlide(n) {
+        currentIndex = (currentIndex + n + images.length) % images.length;
+        showImage(currentIndex);
+      }
+
+      function showImage(index) {
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = images[index];
+      }
+    </script>
+  </body>
+</html>
