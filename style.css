@@ -128,12 +128,16 @@ h2 {
 
 .project-filters {
   display: grid;
-  grid-template-columns: repeat(3, minmax(120px, max-content)); /* 3 columns */
-  grid-template-rows: repeat(2, auto); /* exactly 2 rows */
-  justify-content: center;
+  grid-template-columns: repeat(3, 200px); /* wider so text fits */
   gap: 1em 2em;
+  justify-content: center;
   margin-bottom: 2em;
-  grid-auto-flow: row;
+}
+
+@media (max-width: 900px) {
+  .project-filters {
+    grid-template-columns: repeat(2, 200px);
+  }
 }
 
 .project-filters label {
