@@ -139,7 +139,7 @@ h2 {
     grid-template-columns: repeat(2, 200px);
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .project-filters {
     grid-template-columns: 1fr; /* stack on mobile */
   }
