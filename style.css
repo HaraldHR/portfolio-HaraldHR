@@ -139,6 +139,11 @@ h2 {
     grid-template-columns: repeat(2, 200px);
   }
 }
+@media (max-width: 400px) {
+  .project-filters {
+    grid-template-columns: 1fr; /* stack on mobile */
+  }
+}
 
 .project-filters label {
   font-size: 1rem;
