@@ -53,8 +53,8 @@ const projects = [
     type: "game",
   },
   {
-    title: "Continous Integration Service",
-    description: "A basic CI service to use with Github.",
+    title: "Continous Integration Pipeline",
+    description: "A basic CI pipeline to use with Github.",
     image: "project_images/CI.jpg",
     link: "projects/CIService.html",
     type: "other",

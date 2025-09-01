@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      Project: Continuous Integration Service - Harald Hamrin Reinhed
+      Project: Continuous Integration Pipeline - Harald Hamrin Reinhed
     </title>
     <link rel="stylesheet" href="../style.css" />
   </head>
@@ -21,7 +21,7 @@
 
     <main>
       <h1 class="project-page-title">
-        Project: Continuous Integration Service
+        Project: Continuous Integration Pipeline
       </h1>
 
       <section id="github-link" class="project-page-section">
@@ -45,12 +45,12 @@
       <section id="description" class="project-page-section">
         <h2>Description</h2>
         <p>
-          This project implements a basic Continuous Integration (CI) service in
-          Python. It automatically responds to GitHub events using webhooks, and
-          checks if a committed version of a repository compiles and passes its
-          unit tests.
+          This project implements a basic Continuous Integration (CI) pipeline
+          in Python. It automatically responds to GitHub events using webhooks,
+          and checks if a committed version of a repository compiles and passes
+          its unit tests.
           <br /><br />
-          The service runs as a small HTTP server and uses the GitHub REST API
+          The pipeline runs as a small HTTP server and uses the GitHub REST API
           to report build status back to GitHub. If the build passes all steps
           (compilation and unittests), it sets the status to "success",
           otherwise "failure".
