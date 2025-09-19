@@ -1,11 +1,20 @@
 const projects = [
   {
+    title: "EA SEED Project: Hierarchical RL in Games",
+    description:
+      "A Unity project made for EA SEED, using RL and LLMs for better AI Agents.",
+    image: "project_images/EA.jpg",
+    link: null,
+    types: ["ml", "game"],
+    comingSoon: true,
+  },
+  {
     title: "Shapespeare LSTM",
     description:
       "A Pytorch LSTM trained on Shakespeare plays, improved with the use of BPE and Word2vec.",
     image: "project_images/shakespeare.jpg",
     link: "projects/LSTM.html",
-    type: "ml",
+    types: ["ml"],
   },
   {
     title: "Image Classification CNN",
@@ -13,14 +22,14 @@ const projects = [
       "A convolutional neural network for image classification, built from scratch using NumPy.",
     image: "project_images/cnnimage.jpg",
     link: "projects/CNN.html",
-    type: "ml",
+    types: ["ml"],
   },
   {
     title: "3D Adventure RPG in Unity",
     description: "A (not finished) Unity powered game.",
     image: "project_images/voxelrpg.jpg",
     link: "projects/VoxelRPG.html",
-    type: "game",
+    types: ["game"],
   },
   {
     title: "Bar2Tender",
@@ -28,14 +37,14 @@ const projects = [
       "A React website for cocktail recipes using the TheCocktailDB API.",
     image: "project_images/bar2tender.jpg",
     link: "projects/Bar2Tender.html",
-    type: "web",
+    types: ["web"],
   },
   {
     title: "BeeWare Contribution (Toga)",
     description: "Contribution to the Beeware Toga repository.",
     image: "project_images/toga.jpg",
     link: "projects/Toga.html",
-    type: "oss",
+    types: ["oss"],
   },
   {
     title: "Arduino-Powered Game Controller",
@@ -43,21 +52,21 @@ const projects = [
       "Two Arduino-powered controllers used for a game built with Processing.",
     image: "project_images/arduino.jpg",
     link: "projects/ArduinoController.html",
-    type: "embedded",
+    types: ["embedded"],
   },
   {
     title: "Hungry Snakes",
     description: "My first object-oriented programming project.",
     image: "project_images/snake.jpg",
     link: "projects/HungrySnakes.html",
-    type: "game",
+    types: ["game"],
   },
   {
     title: "Continous Integration Pipeline",
     description: "A basic CI pipeline to use with Github.",
     image: "project_images/CI.jpg",
     link: "projects/CIService.html",
-    type: "other",
+    types: ["other"],
   },
 ];
 
@@ -80,24 +89,44 @@ function filterProjects(activeFilters) {
   container.innerHTML = ""; // Clear existing cards
 
   projects.forEach((project) => {
-    if (activeFilters.length === 0 || activeFilters.includes(project.type)) {
-      // Create the <a> element that will wrap the entire card
-      const link = document.createElement("a");
-      link.href = project.link;
-      link.className = "project-card"; // Add your card styling here
-      link.style.backgroundImage = `url('${project.image}')`;
+    const matchesFilter =
+      activeFilters.length === 0 ||
+      project.types.some((t) => activeFilters.includes(t));
 
-      // Add the inner content inside the <a>
-      link.innerHTML = `
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
+    if (matchesFilter) {
+      let card;
+
+      if (project.link) {
+        card = document.createElement("a");
+        card.href = project.link;
+      } else {
+        card = document.createElement("div");
+        card.classList.add("disabled-card");
+      }
+
+      card.classList.add("project-card");
+      card.style.backgroundImage = `url('${project.image}')`;
+
+      let innerHTML = `
+        <div class="card-content">
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+        </div>
       `;
 
-      // Append the <a> (card) to the container
-      container.appendChild(link);
+      if (project.comingSoon) {
+        innerHTML += `<div class="coming-soon-badge">Coming Soon</div>`;
+      }
+
+      card.innerHTML = innerHTML;
+      container.appendChild(card);
     }
   });
 }
+
+
+
+
 
 // On page load, sync filtering with checked checkboxes
 window.addEventListener("load", () => {
